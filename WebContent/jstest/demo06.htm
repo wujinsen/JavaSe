@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>JQuery Demo</title>
+<meta charset="UTF-8">
+<script type="text/javascript" src="jquery-1.10.2.js"></script>
+<link rel="stylesheet" type="text/css" href="form.css">
+<script type="text/javascript">
+	$(function() {	// 自动执行
+		$("span:empty").attr("class","success") ;//取得不包含子元素或者是任何文本的空元素
+		$("span:empty").text("每天的话题就是：今天中午吃什么？") ; ;
+	}) ;
+</script>
+</head>
+<body> 
+<span>aaa</span>
+<span><h1>今天周四了</h1></span>
+<div>Hello World</div>
+</body>
+</html>
+

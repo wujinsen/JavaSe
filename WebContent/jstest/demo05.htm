@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>JQuery Demo</title>
+<meta charset="UTF-8">
+<script type="text/javascript" src="jquery-1.10.2.js"></script>
+<link rel="stylesheet" type="text/css" href="form.css">
+<script type="text/javascript">
+	$(function() {	// 自动执行
+		//$("li:even").attr("class","success") ;	//odd表示奇数
+		$("li:nth-child(2)").text("每天的话题就是：今天中午吃什么？") ; //获取每个父元素下特定位置的元素，从1开始
+		$("li:lt(1)").text("哈哈哈哈哈");
+		$("span:parent").attr("class","success") ;
+		$("h2:parent").text("每天的话题就是：今天中午吃什么？") ; ;
+
+	}) ;
+</script>
+</head> 
+<body> 
+	<div style="display: block;" id="msgA" title="helloA">
+		<ul>
+			<li>星期1</li>
+			<li>星期2</li>
+			<li>星期3</li>
+			<li>星期4</li>
+			<li>星期5</li>
+			<li>星期6</li>
+			<li>星期0</li>
+			<li>星期0</li>
+		</ul>
+	</div>
+	<h2><span>你好</span></h2>
+<span><h1>今天周四了</h1></span>
+<div>Hello World</div>
+	
+</body>
+</html>
+

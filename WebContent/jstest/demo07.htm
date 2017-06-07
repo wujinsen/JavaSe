@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>JQuery Demo</title>
+<meta charset="UTF-8">
+<script type="text/javascript" src="jquery-1.10.2.js"></script>
+<link rel="stylesheet" type="text/css" href="form.css">
+<script type="text/javascript">
+	$(function() {
+		$("div").each(function(ind){	// ind是元素的索引
+			// this就表示当前的元素对象
+			alert(ind);
+			$(this).text('ffff') ;
+		})
+	}) ;
+</script> 
+</head> 
+<body> 
+	<div title="WP">第一捣乱分子：</div>
+	<div title="ZD">第二捣乱分子：</div>
+	<div title="ZYH">第三捣乱分子：</div>
+</body> 
+</html>
+

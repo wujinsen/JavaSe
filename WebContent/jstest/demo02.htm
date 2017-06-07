@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>JQuery Demo</title>
+<meta charset="UTF-8">
+<script type="text/javascript" src="jquery-1.10.2.js"></script>
+<link rel="stylesheet" type="text/css" href="css/form.css">
+<script type="text/javascript">
+	function selectInst(ckd) {
+		$("input").attr("checked",ckd) ;
+	}
+</script> 
+</head>
+<body> 
+	王鹏的爱好：<br>
+	<input type="checkbox" value="抽烟" id="inst" name="inst">抽烟<br>
+	<input type="checkbox" value="喝酒" id="inst" name="inst">喝酒<br>
+	<input type="checkbox" value="扣脚" id="inst" name="inst">扣脚<br>
+	<input type="checkbox" value="嫖X" id="inst" name="inst">嫖X<br>
+	<input type="checkbox" value="欺负赵冬" id="inst" name="inst">欺负赵冬<br>
+	<input type="checkbox" value="帮助小忽" id="inst" name="inst">帮助小忽<br>
+	<input type="checkbox" onclick="selectInst(this.checked)">全选
+</body>
+</html>

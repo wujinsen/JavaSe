@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>JQuery Demo</title>
+<meta charset="UTF-8">
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<link rel="stylesheet" type="text/css" href="css/form.css">
+<script type="text/javascript">
+	$(function(){
+		$("select[id=fadeVal]").bind("change",function(){
+			$("img").fadeTo(3000,$(this).val());
+		});;
+	});
+</script>  
+</head>  
+<body>
+	<select id="fadeVal">
+		<option value="0.2">0.2</option>
+		<option value="0.4">0.4</option>
+		<option value="0.6">0.6</option>
+		<option value="0.8">0.8</option>
+		<option value="1.0">1.0</option>
+	</select> 
+	<div><img src="images/a.jpg" width="800" height="600"></div>
+</body> 
+</html>

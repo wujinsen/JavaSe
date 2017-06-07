@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>JQuery Demo</title>
+<meta charset="UTF-8">
+<script type="text/javascript" src="jquery-1.10.2.js"></script>
+<link rel="stylesheet" type="text/css" href="form.css">
+<script type="text/javascript">
+	$(function() {	// 自动执行
+		$("input:not(#uid)").attr("class","success") ;
+		$("input:not(#uid)").val("每天的话题就是：今天中午吃什么？") ; 
+		$("input:first").attr("value", "哈哈");
+	}) ;
+</script>
+</head> 
+<body> 
+<form id="f">
+	<input type="text" value="HELLO ONE" id="uid">
+	<input type="text" value="HELLO TWO" id="name">
+	
+</form>
+</body>
+</html>

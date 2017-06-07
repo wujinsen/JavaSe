@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>JQuery Project</title>
+<meta charset="UTF-8">
+<script type="text/javascript" src="jquery-1.10.2.js"></script>
+<script type="text/javascript">
+	function showInfo() {
+		var val = $("#msg").html() ;//取得html内容
+		alert(val) ;
+		$("#msg").html("<h2>世界，你好！</h2>") ;//设置内容
+	}
+</script>
+</head>
+<body>
+	<div id="msg">
+		<h1>HELLO WORLD!</h1>
+	</div>
+	<input type="button" value="PUSH ME" onclick="showInfo()">
+</body>
+</html>

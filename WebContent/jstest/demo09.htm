@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>JQuery Demo</title>
+<meta charset="UTF-8">
+<script type="text/javascript" src="jquery-1.10.2.js"></script>
+<link rel="stylesheet" type="text/css" href="form.css">
+<script type="text/javascript">
+	$(function() {
+		var data = new Array("张三", "李四", "王五");
+		var ulElement = $("<ul></ul>"); // 创建节点
+		for (var x = 0; x < data.length; x++) {
+			ulElement.append($("<li>" + data[x] + "</li>"));
+		}
+		$("div").append("<h1>追加元素</h1>");
+		$("div").append(ulElement);
+	});
+</script>
+
+</head>
+<body>
+	<div></div>
+</body>
+</html>
