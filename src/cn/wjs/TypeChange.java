@@ -1,6 +1,8 @@
 package cn.wjs;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -14,9 +16,12 @@ public class TypeChange {
 		map.put(1, 1);
 		String a = map.get("aa").toString();
 		String b = map.get(1).toString();
-		String c = (String) map.get(1);
+		int c =  (int) map.get(1);
 		System.out.println(a);
 		System.out.println(b);
 		//System.out.println(c);
+		List list = new ArrayList();
+		list.add("aaa");
+		System.out.println(list.indexOf("aaa"));
 	}
 }
