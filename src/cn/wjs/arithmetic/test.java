@@ -5,7 +5,7 @@ package cn.wjs.arithmetic;
  * @date 2016年7月23日
  */
 public class test {
-	public static void main(String[] args) {
+	public static void main(String[] args) {//testaa
 		fun(new B());//利用向上转型
 		fun(new C());
 	}
