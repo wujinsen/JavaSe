@@ -6,11 +6,6 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
-import javafx.scene.shape.Line;
-
-import org.apache.commons.collections.map.StaticBucketMap;
-import org.w3c.dom.css.Counter;
-
 /**
  * @author 吴锦森
  * @date 2016年6月10日
@@ -20,7 +15,7 @@ public class SumJavaCode {
 		// TODO Auto-generated method stub
 		 final int  i = 0;
 		final int  counter = 0;
-		
+
 		String path = "d:\\Hello.java";
 		List<File> list = total(path);
 		System.out.println("文件数量：" + list.size());

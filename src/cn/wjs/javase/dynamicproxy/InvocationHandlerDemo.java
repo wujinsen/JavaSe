@@ -4,7 +4,6 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.Arrays;
 
-import com.sun.org.apache.bcel.internal.generic.NEW;
 
 
 /**
@@ -24,7 +23,7 @@ public class InvocationHandlerDemo {//Invocation祈祷，符咒
 		net.doCreate();
 		//Network n2 = (Network) m.bind(net);
 		//n2.doCreate();
-		
+
 //		MyHandler m2 = new MyHandler();//代理类
 //		Network n = (Network)m2.bind(new RealNetwork());
 //		n.doCreate();
@@ -38,8 +37,8 @@ public class InvocationHandlerDemo {//Invocation祈祷，符咒
 		// System.out.println("target.getClass().getInterfaces():"+target.getClass().getInterfaces());
 		 return Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(), this);
 	 }
-	 
-	 
+
+
 	/* (non-Javadoc)
 	 * @see java.lang.reflect.InvocationHandler#invoke(java.lang.Object, java.lang.reflect.Method, java.lang.Object[])
 	 */
@@ -82,6 +81,5 @@ public class InvocationHandlerDemo {//Invocation祈祷，符咒
 		public void doCreate() {
 			System.out.println("增加数据。");
 		}
-	}  
+	}
 
- 

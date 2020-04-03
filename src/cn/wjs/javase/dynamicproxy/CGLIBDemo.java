@@ -2,8 +2,6 @@ package cn.wjs.javase.dynamicproxy;
 
 import java.lang.reflect.Method;
 
-import com.sun.org.apache.bcel.internal.generic.NEW;
-
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
@@ -29,17 +27,17 @@ class BookFacadeImpl{
 }
 class BookProxy implements MethodInterceptor{
 	private Object target;
-	
+
 	public Object getInstance(Object target){
 		this.target = target;
-		
+
 		Enhancer e = new Enhancer();
 		e.setSuperclass(this.target.getClass());
 		e.setCallback(this);
 		//创建代理对象
 		return e.create();
 	}
-	
+
 	@Override
 	public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
 		// TODO Auto-generated method stub
@@ -48,5 +46,5 @@ class BookProxy implements MethodInterceptor{
 		System.out.println("事物结束");
 		return null;
 	}
-	
+
 }

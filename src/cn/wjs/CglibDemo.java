@@ -2,8 +2,6 @@ package cn.wjs;
 
 import java.lang.reflect.Method;
 
-import com.sun.org.apache.bcel.internal.generic.NEW;
-
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
@@ -22,17 +20,17 @@ public class CglibDemo {
 		bf.addBook();
 	}
 }
- interface BookFacade1 {  
-    public void addBook();  
-}  
- /** 
-  * 这个是没有实现接口的实现类 
-  *  
-  */  
- class BookFacadeImpl1 {  //这个是没有实现接口的实现类 
-	   public void addBook() {  
-	       System.out.println("增加图书的普通方法...");  
-	}  
+ interface BookFacade1 {
+    public void addBook();
+}
+ /**
+  * 这个是没有实现接口的实现类
+  *
+  */
+ class BookFacadeImpl1 {  //这个是没有实现接口的实现类
+	   public void addBook() {
+	       System.out.println("增加图书的普通方法...");
+	}
 }
 class BookFacadeCglib implements MethodInterceptor {
 
@@ -42,14 +40,14 @@ class BookFacadeCglib implements MethodInterceptor {
 	 * @param target
 	 * @return
 	 */
-	 public Object getInstance(Object target) {  
+	 public Object getInstance(Object target) {
 		 this.target = target;
 		 Enhancer enhancer = new Enhancer();
-		   enhancer.setSuperclass(this.target.getClass());  
-	        // 回调方法  
-	        enhancer.setCallback(this);  
-	        // 创建代理对象  
-	        return enhancer.create();  
+		   enhancer.setSuperclass(this.target.getClass());
+	        // 回调方法
+	        enhancer.setCallback(this);
+	        // 创建代理对象
+	        return enhancer.create();
 	 }
 	public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
 		System.out.println("事务开始");
@@ -57,5 +55,5 @@ class BookFacadeCglib implements MethodInterceptor {
 		System.out.println("事务结束");
 		return null;
 	}
-	
+
 }

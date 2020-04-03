@@ -1,7 +1,5 @@
 package cn.test;
 
-import org.apache.commons.collections.map.StaticBucketMap;
-import org.eclipse.jdt.internal.compiler.ast.ThrowStatement;
 
 /**
  * @author 吴锦森
@@ -24,7 +22,7 @@ public class Test2 {
 		a.setName("更改后的内容:bbb");
 		return a.getName();
 	}
-			
+
 }
 class Aa{
 	private String name;
@@ -37,7 +35,7 @@ class Aa{
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
 }
 class C1{
 	public void fun(){
