@@ -15,6 +15,7 @@ public class FutureTest {
 	public static void main(String[] args) {
 
 		ExecutorService service = Executors.newSingleThreadExecutor();//只有一个线程的线程池，因此所有提交的任务是顺序执行
+
 		class MyCallable implements Callable<String> {
 
 			public String call() throws Exception {

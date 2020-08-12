@@ -1,6 +1,7 @@
 package cn.wjs.javase.thread.lock;
 
 import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author 吴锦森
@@ -8,6 +9,7 @@ import java.util.concurrent.locks.Lock;
  */
 public class LockDemo {
 	public static void main(String[] args) {
-		
+		ReentrantLock lock = new ReentrantLock();
+		lock.lock();
 	}
 }
