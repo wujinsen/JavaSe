@@ -47,4 +47,5 @@ class Context {
     public void strategyMethod() {
         strategy.strategyMethod();
     }
+
 }

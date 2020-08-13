@@ -16,7 +16,6 @@ public class TemplateMethod {
 //抽象类
 abstract class AbstractClass {
     public void TemplateMethod(){ //模板方法
-
         SpecificMethod();
         abstractMethod1();
         abstractMethod2();
@@ -29,6 +28,7 @@ abstract class AbstractClass {
     public abstract void abstractMethod1(); //抽象方法1
 
     public abstract void abstractMethod2(); //抽象方法2
+
 }
 
 //具体子类
@@ -44,6 +44,7 @@ class ConcreteClass extends AbstractClass {
 
 //具体子类
 class ConcreteClass2 extends AbstractClass {
+
     public void abstractMethod1() {
         System.out.println("ConcreteClass2 抽象方法1的实现被调用...");
     }
@@ -51,4 +52,5 @@ class ConcreteClass2 extends AbstractClass {
     public void abstractMethod2() {
         System.out.println("ConcreteClass2 抽象方法2的实现被调用...");
     }
+
 }
