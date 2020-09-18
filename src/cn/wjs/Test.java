@@ -19,6 +19,12 @@ public class Test {
 	}
 
 	public static void main(String[] args) {
+		System.out.println(new Date().getTime());
+		System.out.println(System.currentTimeMillis());
+
+		Calendar date1 = Calendar.getInstance();
+		Calendar date2 = Calendar.getInstance();
+		System.out.println(date1.getTime().getTime() - date2.getTime().getTime());
 
 		Test test = new Test();
 		System.out.println(test);
@@ -57,7 +63,7 @@ public class Test {
 		System.out.println(list);
 
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
-		
+
 		System.out.println(sdf.format(new Date()) + "0000");
 		System.out.println(sdf.format(getDayBegin()));
 		System.out.println(sdf.format(getBeginDayOfTomorrow()));
