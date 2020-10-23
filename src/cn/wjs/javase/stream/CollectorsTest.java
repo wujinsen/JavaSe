@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 
 public class CollectorsTest {
     public static void main(String[] args) {
+
         Set<String> set = new HashSet();
         set.add("a");
         set.add("a");
@@ -20,11 +21,11 @@ public class CollectorsTest {
         studentList.add(new StudentA(1, "王五", new BigDecimal(20)));
 
         System.out.println(studentList.stream().collect(Collectors.groupingBy(StudentA::getId, Collectors.counting())));
-//两个
+        //两个
         double sum = studentList.stream().mapToInt(StudentA::getId).sum();
-
         System.out.println(sum);
         System.out.println("---------collectingAndThen两个聚合函数（stream次数多）---------");
+        //排序
         List<StudentA> studentsSortName = studentList.stream().sorted(Comparator.comparing(StudentA::getAge)).collect(Collectors.toList());
         System.out.println(studentsSortName);
 
