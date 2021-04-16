@@ -34,6 +34,7 @@ class ConcreteStrategyB implements Strategy {
 
 //环境类
 class Context {
+
     private Strategy strategy;
 
     public Strategy getStrategy() {
