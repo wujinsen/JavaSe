@@ -13,7 +13,6 @@ public class TimestampTest {
         System.out.println(str.substring(4, 8));
         // System.out.println(str.substring(8, 12));
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-
         System.out.println(new java.sql.Timestamp(sdf.parse("2020-08-05").getTime()));
 
     }
