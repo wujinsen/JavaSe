@@ -26,6 +26,7 @@ public class CountDownLautchDemo {
                 }
             }
         }).start();
+
         for (char threadName = 'A'; threadName <= 'C'; threadName++) {
             final String tN = String.valueOf(threadName);
             new Thread(new Runnable() {
