@@ -6,7 +6,7 @@ package cn.test;
  */
 public class IfelseSwith {
 	public static void main(String[] args) {
-		int i = 10;
+		int i = 100;
 		switch (i) {
 		case 1:
 			System.out.println(1);
