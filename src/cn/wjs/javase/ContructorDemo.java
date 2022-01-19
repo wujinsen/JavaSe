@@ -5,7 +5,7 @@ package cn.wjs.javase;
  * @author 吴锦森
  * @date 2015年12月6日
  */
-public class ContructorDemo extends Animal {
+public class ContructorDemo extends cn.wjs.javase.abstrac.Animal {
 	public static void main(String[] args) {
 		new Dog();//Test the executive order of constructor
 	}
@@ -20,13 +20,13 @@ class Animal{
 		System.out.println(name + "  class Animal");
 		printNumber();
 	}
-	
+
 	public void printNumber(){
-		
+
 	}
 }
 
-class Fish extends Animal{
+class Fish extends cn.wjs.javase.abstrac.Animal {
 	Fish() {
 		System.out.println("class Fish");
 	}
@@ -46,26 +46,26 @@ class Cat {
 
 class Rabbit {
 	private static int number;
-	private static Cat cat = new Cat();
+	private static cn.wjs.javase.abstrac.Cat cat = new cn.wjs.javase.abstrac.Cat();
 	public Rabbit() {
 		number++;
 		System.out.println(number + "class rabbit");
 	}
 }
 
-class Dog extends Animal{
+class Dog extends cn.wjs.javase.abstrac.Animal {
 	public int dogNumber;
 	private GoldFish goldFish = new GoldFish();
-	static  Rabbit blackRabbit = new Rabbit(); 
-	static  Rabbit whiterabbit = new Rabbit(); 
-	
+	static  Rabbit blackRabbit = new Rabbit();
+	static  Rabbit whiterabbit = new Rabbit();
+
 	public Dog() {
 		super("Tom");
 		System.out.println("class Dog");
 		dogNumber = 10;
 		System.out.println("The dog's number is:" + dogNumber);
 	}
-	
+
 	public void printNumber(){
 		System.out.println("The dog's number is:" + dogNumber);
 	}

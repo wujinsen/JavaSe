@@ -1,10 +1,20 @@
 package cn.test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class GeneratePassword {
 
     public static void main(String[] args) {
         for(int i =0 ;i< 10 ;i++){
             name(10);
+        }
+        List<String> list = new ArrayList();
+        list.add("a");
+        list.add("b");
+        list.add("c");
+        for(int i=0; i<list.size();i++){
+            System.out.println(list.get(i));
         }
     }
     // 生成复杂码函数
