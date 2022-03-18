@@ -18,7 +18,7 @@ public class CompletableFutureDemo {
         CompletableFuture<String> cfOne = CompletableFuture.supplyAsync(()->{
             return queryCode("one");
         });
-
+        //cfOne执行成功后继续执行下一个任务
         CompletableFuture<String> oneNext = cfOne.thenApplyAsync((a)->{
             return queryCode("oneNext");
         });
@@ -30,7 +30,7 @@ public class CompletableFutureDemo {
         System.out.println(ctThree.get());
         System.out.println(cfOne.get());
         System.out.println(cfTwo.get());
-        System.out.println(oneNext.get());
+      //  System.out.println(oneNext.get());
         oneNext.thenAccept((result)->{
             System.out.println(result);
         });
