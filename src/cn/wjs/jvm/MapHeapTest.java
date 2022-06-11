@@ -19,6 +19,8 @@ public class MapHeapTest {
         System.gc();
         end = Runtime.getRuntime().freeMemory();
         System.out.println("一个HashMap对象占内存:" + (end - start));
+
+
     }
 
 }

@@ -7,6 +7,11 @@ import java.util.List;
 
 public class Java8Tester {
     public static void main(String args[]) {
+        System.out.println(1%3);
+        System.out.println(2%3);
+        System.out.println(3%3);
+        System.out.println(4%3);
+        System.out.println(5%3);
 
         List<String> names1 = new ArrayList<String>();
         names1.add("Google ");
